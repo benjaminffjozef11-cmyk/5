@@ -50,15 +50,15 @@
             border-radius: 24px; border: 1px solid rgba(128,128,128,0.1); box-shadow: var(--shadow-sm);
         }
         nav h1 { font-size: 1rem; letter-spacing: 2px; font-weight: 800; color: var(--accent-blue); }
-        nav ul { display: flex; list-style: none; align-items: center; gap: 20px; }
-        nav ul li a { color: var(--text-main); text-decoration: none; font-size: 0.8rem; font-weight: 700; opacity: 0.7; transition: 0.3s; display: flex; align-items: center; gap: 5px; }
+        nav ul { display: flex; list-style: none; align-items: center; gap: 15px; }
+        nav ul li a { color: var(--text-main); text-decoration: none; font-size: 0.75rem; font-weight: 700; opacity: 0.7; transition: 0.3s; display: flex; align-items: center; gap: 5px; }
 
         @media (max-width: 768px) {
             nav { top: auto; bottom: 15px; width: 95%; height: 65px; padding: 0 1rem; border-radius: 20px; }
             nav h1 { display: none; }
-            nav ul { width: 100%; justify-content: space-around; }
-            nav ul li a span { display: block; font-size: 1.2rem; }
-            nav ul li a { font-size: 0.6rem; flex-direction: column; gap: 2px; }
+            nav ul { width: 100%; justify-content: space-around; gap: 5px; }
+            nav ul li a span { display: block; font-size: 1.1rem; }
+            nav ul li a { font-size: 0.55rem; flex-direction: column; gap: 2px; }
         }
 
         /* HERO */
@@ -71,6 +71,23 @@
         }
         header h1 { font-size: clamp(2.5rem, 8vw, 6rem); font-weight: 800; }
 
+        /* ABOUT SECTION */
+        .about-container { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; text-align: left; }
+        .about-text { flex: 1; min-width: 300px; }
+        .about-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 30px; }
+        .stat-item { background: var(--bg-card); padding: 20px; border-radius: 20px; text-align: center; box-shadow: var(--shadow-sm); transition: 0.3s; }
+        .stat-item h3 { color: var(--accent-blue); font-size: 1.5rem; margin-bottom: 5px; }
+        .stat-item p { font-size: 0.7rem; color: var(--text-muted); }
+
+        /* STRUKTUR ORGANISASI */
+        .org-wrapper { display: flex; flex-direction: column; gap: 30px; align-items: center; margin-top: 40px; }
+        .org-row { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; width: 100%; }
+        .org-card { background: var(--bg-card); padding: 20px; border-radius: 25px; width: 220px; text-align: center; box-shadow: var(--shadow-sm); border: 1px solid rgba(128,128,128,0.05); transition: 0.4s; }
+        .org-card.leader { border: 2px solid var(--accent-blue); transform: scale(1.05); box-shadow: var(--shadow-lg); }
+        .org-card img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 12px; border: 3px solid var(--accent-soft); }
+        .org-card h5 { color: var(--accent-blue); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
+        .org-card p { font-weight: 800; font-size: 1rem; }
+
         /* STUDENT SECTION */
         section { padding: 80px 5%; max-width: 1200px; margin: 0 auto; }
         #studentSearch { display: block; margin: -30px auto 40px; padding: 15px 20px; width: 100%; max-width: 500px; border-radius: 15px; border: none; background: var(--bg-card); box-shadow: var(--shadow-sm); outline: none; color: var(--text-main); text-align: center; }
@@ -80,7 +97,7 @@
         .card h4 { font-size: 0.9rem; margin-bottom: 5px; }
         .card p { font-size: 0.7rem; color: var(--text-muted); line-height: 1.3; }
 
-        /* GALLERY SECTION */
+        /* GALLERY & OTHERS */
         .filter-wrapper { display: flex; justify-content: center; gap: 8px; margin-bottom: 30px; flex-wrap: wrap; }
         .filter-btn { padding: 10px 18px; border-radius: 12px; border: none; background: var(--bg-card); color: var(--text-main); font-weight: 700; cursor: pointer; font-size: 0.8rem; }
         .filter-btn.active { background: var(--accent-blue); color: white; }
@@ -94,12 +111,10 @@
         .galeri-item:hover .galeri-overlay p { transform: translateY(0); }
         .galeri-item:hover img { transform: scale(1.1); }
 
-        /* GUESTBOOK */
         .guest-box { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 25px; }
         .msg-form-container { background: var(--bg-card); padding: 25px; border-radius: 25px; box-shadow: var(--shadow-sm); }
         .msg-card { background: var(--bg-card); padding: 20px; border-radius: 18px; box-shadow: var(--shadow-sm); opacity: 0; transform: translateY(15px); text-align: left; }
 
-        /* CONTROLS */
         .music-control { position: fixed; bottom: 100px; right: 20px; background: var(--accent-blue); color: white; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 3000; box-shadow: var(--shadow-lg); }
         #backToTop { position: fixed; bottom: 160px; right: 20px; width: 45px; height: 45px; background: var(--accent-blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: none; opacity: 0; visibility: hidden; transition: 0.4s; z-index: 3000; }
         #backToTop.show { opacity: 1; visibility: visible; }
@@ -125,6 +140,8 @@
         <h1>DELIGHTFUL</h1>
         <ul>
             <li><a href="#home"><span>🏠</span> Home</a></li>
+            <li><a href="#tentang"><span>✨</span> Tentang kami</a></li>
+            <li><a href="#struktur"><span>👑</span> Struktur</a></li>
             <li><a href="#siswa"><span>👥</span> Teman</a></li>
             <li><a href="#galeri"><span>🖼️</span> Galeri</a></li>
             <li><a href="#buku-tamu"><span>💬</span> Pesan</a></li>
@@ -139,6 +156,76 @@
         <p style="letter-spacing: 5px; font-weight: 800; font-size: 0.6rem; margin-bottom: 10px;">MEMORI 2024-2026</p>
         <h1>"DELIGHTFUL"</h1>
     </header>
+
+    <section id="tentang">
+        <div class="about-container">
+            <div class="about-text">
+                <h2 style="font-size: 2rem; margin-bottom: 15px;">Tentang <span style="color:var(--accent-blue)">Kelas Kami</span></h2>
+                <p style="line-height: 1.6; color: var(--text-muted); font-size: 0.9rem;">
+                    "Delightful" bukan sekadar nama, melainkan cerminan dari setiap tawa, kerja keras, dan kebersamaan yang kita lalui di Kelas D. Sejak tahun 2024 hingga 2026, kita telah mengukir banyak cerita indah.
+                </p>
+                <div class="about-stats">
+                    <div class="stat-item"><h3>37</h3><p>Siswa Hebat</p></div>
+                    <div class="stat-item"><h3>26</h3><p>Foto Galeri</p></div>
+                    <div class="stat-item"><h3>3</h3><p>Tahun Bersama</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="struktur" style="background: var(--accent-soft); border-radius: 60px 60px 0 0;">
+        <div class="section-title" style="text-align: center; margin-bottom: 40px;"><h2>Struktur <span>Organisasi</span></h2></div>
+        
+        <div class="org-wrapper">
+            <div class="org-row">
+                <div class="org-card leader">
+                    <img src="MS.jenni.png">
+                    <h5>Wali Kelas</h5>
+                    <p>Ms. Jenni</p>
+                </div>
+            </div>
+
+            <div class="org-row">
+                <div class="org-card">
+                    <img src="7.JPG">
+                    <h5>Ketua Kelas</h5>
+                    <p>Febri</p>
+                </div>
+                <div class="org-card">
+                    <img src="4.JPG">
+                    <h5>Wakil Ketua</h5>
+                    <p>Dennis</p>
+                </div>
+            </div>
+
+            <div class="org-row">
+                <div class="org-card">
+                    <img src="13.JPG">
+                    <h5>Sekretaris 1</h5>
+                    <p>Bulan</p>
+                </div>
+                <div class="org-card">
+                    <img src="10.JPG">
+                    <h5>Sekretaris 2</h5>
+                    <p>Sumastika</p>
+                </div>
+            </div>
+
+            <div class="org-row">
+                <div class="org-card">
+                    <img src="19.JPG">
+                    <h5>Bendahara 1</h5>
+                    <p>Vina</p>
+                </div>
+                <div class="org-card">
+                    <img src="11.JPG">
+                    <h5>Bendahara 2</h5>
+                    <p>Wardhi</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <section id="siswa">
         <div class="section-title" style="text-align: center; margin-bottom: 40px;"><h2>Teman <span>Sejati</span></h2></div>
@@ -179,23 +266,22 @@
             <div class="card fade-in" data-name="Rafa"><img src="33.JPG"><h4>Rafa</h4><p>"jika orang tidak tertawa mengenai impianmu maka impianmu kurang besar."</p></div>
             <div class="card fade-in" data-name="Razel"><img src="34.JPG"><h4>Razel</h4><p>""</p></div>
             <div class="card fade-in" data-name="Samuel"><img src="35.JPG"><h4>Samuel</h4><p>"yang berjuang bakal kalah sama yang beruang"</p></div>
-            <div class="card fade-in" data-name="Zacky"><img src="36.JPG"><h4>Zacky</h4><p>jalan panjang ku mulai dari sini, setiap langkah membawa impian mendekat</p></div>
+            <div class="card fade-in" data-name="Zacky"><img src="36.JPG"><h4>Zacky</h4><p>"jalan panjang ku mulai dari sini, setiap langkah membawa impian mendekat"</p></div>
             <div class="card fade-in" data-name="Michael"><img src="37.JPG"><h4>Michael</h4><p>"fokus ke proses,bukan ke drama"</p></div>
             <div class="card fade-in" data-name="MsBuJenni"><img src="MS.jenni.png"><h4>Ms.Jenni</h4><p>"fokus ke proses,bukan ke drama"</p></div>
         </div>
-    </section> <video src=""></video>
+    </section>
 
     <section id="galeri" style="background: var(--accent-soft); border-radius: 40px 40px 0 0;">
         <div class="section-title" style="text-align: center; margin-bottom: 40px;"><h2>Galeri <span>Kenangan</span></h2></div>
-        
         <div class="filter-wrapper">
             <button class="filter-btn active" onclick="filterGal('all', this)">Semua</button>
             <button class="filter-btn" onclick="filterGal('k7', this)">Kelas 7</button>
             <button class="filter-btn" onclick="filterGal('k8', this)">Kelas 8</button>
             <button class="filter-btn" onclick="filterGal('k9', this)">Kelas 9</button>
+            <button class="filter-btn" onclick="filterGal('meme', this)">Kelucuan Kelas D</button>
         </div>
-
-        <div class="galeri-grid">
+        <div class="galeri-grid" id="galeryBox">
             <div class="galeri-item k7" onclick="openZoom(this)">
                 <img src="KELAS 7 (1).jpg">
                 <div class="galeri-overlay"><p>Study Tour Bersama 📖📸</p></div>
@@ -296,6 +382,50 @@
                 <img src="KELAS 9 (7).jpg">
                 <div class="galeri-overlay"><p>Foto Dengan Jaket Baru 🥼👱👩</p></div>
             </div>
+            <div class="galeri-item meme" onclick="openZoom(this)">
+                <img src="Lucu  (1).jpeg">
+                <div class="galeri-overlay"><p>Pentol Mode InnerChild 🧸</p></div>
+            </div>
+            <div class="galeri-item meme" onclick="openZoom(this)">
+                <img src="Lucu (2).jpeg">
+                <div class="galeri-overlay"><p>Kamu Ngapain Can ? 😅</p></div>
+            </div>
+            <div class="galeri-item meme" onclick="openZoom(this)">
+                <img src="Lucu  (3).jpeg">
+                <div class="galeri-overlay"><p>Tarzan Kelas D 👦</p></div>
+            </div>
+            <div class="galeri-item meme" onclick="openZoom(this)">
+                <img src="Lucu  (4).jpeg">
+                <div class="galeri-overlay"><p>Mirip Banget 🤣😭</p></div>
+            </div>
+            <div class="galeri-item meme" onclick="openZoom(this)">
+                <img src="Lucu  (5).jpeg">
+                <div class="galeri-overlay"><p>Atlet Wushu Kelas D 🐉</p></div>
+            </div>
+            <div class="galeri-item meme" onclick="openZoom(this)">
+                <img src="Lucu  (6).jpeg">
+                <div class="galeri-overlay"><p>VINA MODE BADDAS 🔥</p></div>
+            </div>
+            <div class="galeri-item meme" onclick="openZoom(this)">
+                <img src="Lucu (7).jpeg">
+                <div class="galeri-overlay"><p>AHH SO SWEET 🥰💘💞</p></div>
+            </div>
+            <div class="galeri-item meme" onclick="openZoom(this)">
+                <img src="Lucu  (8).jpeg">
+                <div class="galeri-overlay"><p>Penyakit Jarang Puasa 😱</p></div>
+            </div>
+            <div class="galeri-item meme" onclick="openZoom(this)">
+                <img src="Lucu  (9).jpeg">
+                <div class="galeri-overlay"><p>Selebritas Kelas D 📸</p></div>
+            </div>
+            <div class="galeri-item meme" onclick="openZoom(this)">
+                <img src="Lucu  (10).jpeg">
+                <div class="galeri-overlay"><p>+1000 AURA ❤️‍🔥</p></div>
+            </div>
+            <div class="galeri-item meme" onclick="openZoom(this)">
+                <img src="Lucu (11).jpeg">
+                <div class="galeri-overlay"><p>Kembar Mode Ramah 🤗</p></div>
+            </div>
         </div>
     </section>
 
@@ -379,7 +509,7 @@
 
         function observe() {
             const obs = new IntersectionObserver(es => es.forEach(e => e.isIntersecting && e.target.classList.add('fade-in')), {threshold:0.1});
-            document.querySelectorAll('.card, .galeri-item, .msg-card').forEach(el => obs.observe(el));
+            document.querySelectorAll('.card, .galeri-item, .msg-card, .stat-item, .org-card').forEach(el => obs.observe(el));
         }
 
         window.onscroll = () => {
